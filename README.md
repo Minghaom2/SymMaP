@@ -16,4 +16,4 @@ SymMaP: Improving Computational Efficiency in Linear Solvers through Symbolic Pr
 │     ├─ makefile         # cmake文件
 │     └─ generate.ipynb   # 创建数据集核心文件
 └─ results/               # 实验结果（可选，放关键结果日志或可视化）
-<\pre>
+</pre>
