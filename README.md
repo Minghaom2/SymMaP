@@ -1,9 +1,33 @@
 # SymMaP
 SymMaP: Improving Computational Efficiency in Linear Solvers through Symbolic Preconditioning --- NeurIPS2025
 
+### Get Start
+
+To begin, you need to generate a dataset that includes the equations and their corresponding optimal preconditioning parameters. As an example, we consider a second-order elliptic PDE preconditioned using the SOR method.
+
+Navigate to the data generation directory:
+
+``cd data/sor``
+
+Run the data generation script:
+
+``python generate.py``
+
+To use a different equation or preconditioning method, or to adjust the generation parameters, modify the relevant sections in generate.py or navigate to other preprocessor name directories.
+
+The generated dataset will be saved in the form of X.json and y.json.
+
+### Train
+
+
+
+### Results
+
+
+
+### Code Structure
+
 <pre>
-├─ README.md
-├─ LICENSE                
 ├─ SymMaP/
 │  ├─ 
 │  ├─ 
@@ -11,7 +35,9 @@ SymMaP: Improving Computational Efficiency in Linear Solvers through Symbolic Pr
 ├─ data/
 │  └─ precondition/
 │     ├─ e.c              # PETSc equation solver file
-│     ├─ makefile         # cmake file
-│     └─ generate.ipynb   # build data set
-└─ results/
+│     ├─ makefile         # CMake configuration file
+│     └─ generate.py      # Python file for dataset generation
+└─ README.md   
 </pre>
+
+### Citation
