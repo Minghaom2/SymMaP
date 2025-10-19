@@ -30,7 +30,7 @@ The generated dataset will be saved in the form of ``X.json`` and ``y.json``.
 
 ### Running Symbolic Discovery Process
 
-To train the model, combine the datasets ``X.json`` and ``y.json`` into a single dataset file. Suppose they are located under ``data/`` directory, then:
+To run the process, you may need to combine the datasets ``X.json`` and ``y.json`` into a single dataset file. Suppose they are located under ``data/`` directory, then:
 
 ```python
 python json2multiscv.py --input-dir data/ --output-file csvdata/data.csv
