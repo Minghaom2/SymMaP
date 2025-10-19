@@ -10,8 +10,11 @@ To begin, you need to install the ``dso`` package in an environment with Python 
 pip install -e ./dso
 ```
 
+This will also install the required dependencies.
 
-you need to generate a dataset that includes the equations and their corresponding optimal preconditioning parameters. As an example, we consider a second-order elliptic PDE preconditioned using the SOR method.
+### Data Generation
+
+You need to generate a dataset that includes the equations and their corresponding optimal preconditioning parameters. As an example, we consider a second-order elliptic PDE preconditioned using the SOR method.
 
 Navigate to the data generation directory:
 
@@ -25,7 +28,40 @@ To use a different equation or preconditioning method, or to adjust the generati
 
 The generated dataset will be saved in the form of ``X.json`` and ``y.json``.
 
-### Training
+### Running Symbolic Discovery Process
+
+To train the model, combine the datasets ``X.json`` and ``y.json`` into a single dataset file. Suppose they are located under ``data/`` directory, then:
+
+```python
+python json2multiscv.py --input-dir data/ --output-file csvdata/data.csv
+```
+
+Next, create a configuration file (e.g., ``config.json``) specifying the training parameters, dataset path, and other settings. For example:
+
+```json
+{
+    "task" : {
+      "task_type" : "regression",
+      "dataset" : "csvdata/data.csv",
+      "function_set" : ["add", "sub", "mul", "div", "poly"],
+      "poly_optimizer_params" : {
+        "degree": 3,
+        "coef_tol": 1e-6,
+        "regressor": "dso_least_squares",
+        "regressor_params": {}
+        }
+    }
+  }
+```
+
+*More example configuration files are provided in the ``configs/`` directory.* Then, you can run the regression using the configuration file you specify:
+
+```python
+python -m dso.run path/to/config.json
+```
+
+You can find the discovered expressions in the output log directory. In our example, you can check ``log/dso_csvdata_data_0_hof.csv``. The best expression is usually in the first row.
+
 
 
 
