@@ -54,7 +54,7 @@ Next, create a configuration file (e.g., ``config.json``) specifying the trainin
   }
 ```
 
-*More example configuration files are provided in the ``configs/`` directory.* Then, you can run the regression using the configuration file you specify:
+*More example configuration files are provided in the ``config/`` directory.* Then, you can run the regression using the configuration file you specify:
 
 ```python
 python -m dso.run path/to/config.json

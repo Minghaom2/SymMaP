@@ -1,0 +1,7 @@
+{
+    "task" : {
+      "task_type" : "regression",
+      "dataset" : "csvdata/data.csv",
+      "function_set" : ["add", "sub", "mul", "div", "1.0", "n2"]
+    }
+  }
