@@ -1,7 +1,6 @@
-# SymMaP
-SymMaP: Improving Computational Efficiency in Linear Solvers through Symbolic Preconditioning --- NeurIPS2025
+# SymMaP: Improving Computational Efficiency in Linear Solvers through Symbolic Preconditioning
 
-### Get Start
+### Getting Started
 
 To begin, you need to generate a dataset that includes the equations and their corresponding optimal preconditioning parameters. As an example, we consider a second-order elliptic PDE preconditioned using the SOR method.
 
@@ -17,7 +16,7 @@ To use a different equation or preconditioning method, or to adjust the generati
 
 The generated dataset will be saved in the form of X.json and y.json.
 
-### Train
+### Training
 
 
 
