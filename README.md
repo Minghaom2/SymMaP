@@ -84,4 +84,23 @@ You can find the discovered expressions in the output log directory. In our exam
 └─ README.md   
 </pre>
 
+### Acknowledgements
+
+We would like to express our gratitude to all collaborators, fellow students, and anonymous reviewers for their valuable assistance. Special thanks are extended to [Kuan Xu](http://staff.ustc.edu.cn/~kuanxu/) for significant support.
+
+
 ### Citation
+
+If you use SymMaP in your research, please use the following BibTeX entry.
+```
+@misc{wang2025symmapimprovingcomputationalefficiency,
+      title={SymMaP: Improving Computational Efficiency in Linear Solvers through Symbolic Preconditioning}, 
+      author={Hong Wang and Jie Wang and Minghao Ma and Haoran Shao and Haoyang Liu},
+      year={2025},
+      eprint={2510.24170},
+      archivePrefix={arXiv},
+      primaryClass={math.NA},
+      url={https://arxiv.org/abs/2510.24170}, 
+}
+```
+
