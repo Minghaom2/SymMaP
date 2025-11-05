@@ -2,6 +2,8 @@
 
 SymMaP is a symbolic matrix preconditioning framework that learns compact, human-interpretable formulas for selecting preconditioning parameters in linear solvers. It constructs supervision via adaptive grid search, and trains an RNN with a risk-seeking objective to generate prefix-form expressions that map problem features to near-optimal parameters. The learned one-line expressions plug directly into CPU-oriented solver stacks (e.g., PETSc) with negligible overhead, improving time-to-solution and conditioning across SOR/SSOR/AMG settings while preserving transparency and ease of deployment.
 
+![](.figures/figure1.png)
+
 ### Getting Started
 
 To begin, you need to install the ``dso`` package in an environment with Python 3.6 or higher. Navigate to ``SymMaP/`` and run:
@@ -67,7 +69,13 @@ You can find the discovered expressions in the output log directory. In our exam
 
 ### Results
 
+SymMAaP achieves the state-of-the-art performance on multiple parameterized preconditioners in solving linear systems and could be used for finetuning on different types of downstream PDE problems.
 
+![](.figures/table1.png)
+
+![](.figures/table2.png)
+
+![](.figures/table3.png)
 
 ### Code Structure
 
