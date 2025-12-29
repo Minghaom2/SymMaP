@@ -2,7 +2,7 @@
 
 SymMaP is a symbolic matrix preconditioning framework that learns compact, human-interpretable formulas for selecting preconditioning parameters in linear solvers. It constructs supervision via adaptive grid search, and trains an RNN with a risk-seeking objective to generate prefix-form expressions that map problem features to near-optimal parameters. The learned one-line expressions plug directly into CPU-oriented solver stacks (e.g., PETSc) with negligible overhead, improving time-to-solution and conditioning across SOR/SSOR/AMG settings while preserving transparency and ease of deployment.
 
-![](.figures/figure1.png)
+![](.figures/fg1.png)
 
 ### Getting Started
 
